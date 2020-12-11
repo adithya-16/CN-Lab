@@ -16,7 +16,7 @@ class LeakyBucket:
                 print(f"Packet loss: {packet - x} \t Packets sent: {self.flow}")
                 buffer = self.size
                 print(f"Buffer: {buffer}\n")
-            buffer -= self.flow if self.flow < packet else packet
+            buffer -= self.flow
         print(f"Buffer: {buffer} \t Packets sent: {self.flow}")
         while buffer:
             sent = self.flow if self.flow < buffer else buffer
